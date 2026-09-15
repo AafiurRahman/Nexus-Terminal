@@ -1,0 +1,24 @@
+{
+  "entities": {
+    "userProfile": {
+      "title": "User Profile",
+      "description": "Public and private user data",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "number"
+        }
+      },
+      "required": ["email", "createdAt"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "userProfile",
+      "description": "User profiles"
+    }
+  }
+}
